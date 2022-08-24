@@ -30,6 +30,11 @@ integration-tests/target/*
 .env.production.local
 /.cache
 
+
+# front-end
+dist
+.parcel-cache
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

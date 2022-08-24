@@ -3,7 +3,7 @@ import React from 'react';
 
 import './assets/global.css';
 
-import { getGreetingFromContract, setGreetingOnContract } from './near-api';
+import { getGreetingFromContract, setGreetingOnContract, getTasks, insertTask, updateTask } from './near-api';
 import { EducationalText, SignInPrompt, SignOutButton } from './ui-components';
 
 
@@ -62,6 +62,25 @@ export default function App() {
             </button>
           </div>
         </form>
+
+        <h1>
+          The contract says: <span className="greeting">{valueFromBlockchain}</span>
+        </h1>
+        <form onSubmit={changeGreeting} className="change">
+          <label>Change greeting:</label>
+          <div>
+            <input
+              autoComplete="off"
+              defaultValue={valueFromBlockchain}
+              id="greetingInput"
+            />
+            <button>
+              <span>Save</span>
+              <div className="loader"></div>
+            </button>
+          </div>
+        </form>
+
         <EducationalText/>
       </main>
     </>
