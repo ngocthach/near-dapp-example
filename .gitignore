@@ -19,8 +19,8 @@ node_modules
 /build
 
 # rust
-contract/target
-integration-tests/target
+contract/target/*
+integration-tests/target/*
 
 # misc
 .DS_Store
